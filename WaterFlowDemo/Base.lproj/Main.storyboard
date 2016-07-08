@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WaterFlowDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jhU-Rv-Zbm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewLayout key="collectionViewLayout" id="brf-oG-a6H" customClass="MyLayout" customModule="WaterFlowDemo" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellIdentifier" id="nlx-bY-0yd" customClass="MyCell" customModule="WaterFlowDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAV-Vf-0CR">
+                                                    <rect key="frame" x="0.0" y="4" width="50" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ipd-t7-jpX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeF-w7-JHx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="imageBtnClick:" destination="nlx-bY-0yd" eventType="touchUpInside" id="UtZ-mW-T45"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="HAV-Vf-0CR" firstAttribute="centerY" secondItem="nlx-bY-0yd" secondAttribute="centerY" id="Dgo-yg-4DY"/>
+                                            <constraint firstItem="HAV-Vf-0CR" firstAttribute="centerX" secondItem="nlx-bY-0yd" secondAttribute="centerX" id="TOy-zW-iXJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="HeF-w7-JHx" secondAttribute="trailing" id="V1b-NW-2yU"/>
+                                            <constraint firstItem="HeF-w7-JHx" firstAttribute="leading" secondItem="nlx-bY-0yd" secondAttribute="leading" id="Xu3-bn-Bve"/>
+                                            <constraint firstAttribute="bottom" secondItem="HeF-w7-JHx" secondAttribute="bottom" id="bWL-82-dHf"/>
+                                            <constraint firstItem="HAV-Vf-0CR" firstAttribute="leading" secondItem="nlx-bY-0yd" secondAttribute="leading" id="cNZ-f8-l8a"/>
+                                            <constraint firstItem="HeF-w7-JHx" firstAttribute="top" secondItem="nlx-bY-0yd" secondAttribute="top" id="g7d-QA-F7Y"/>
+                                            <constraint firstAttribute="trailing" secondItem="HAV-Vf-0CR" secondAttribute="trailing" id="mT4-eX-O9e"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="countLabel" destination="HAV-Vf-0CR" id="YkW-66-L21"/>
+                                            <outlet property="imageBtn" destination="HeF-w7-JHx" id="jKO-3a-SJ8"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jhU-Rv-Zbm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bxj-hD-0d2"/>
+                            <constraint firstAttribute="trailing" secondItem="jhU-Rv-Zbm" secondAttribute="trailing" id="JX5-IH-Cn7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jhU-Rv-Zbm" secondAttribute="bottom" id="KF1-NV-UhJ"/>
+                            <constraint firstItem="jhU-Rv-Zbm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q6Z-2i-Jhc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="jhU-Rv-Zbm" id="CID-9e-Rsb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="309"/>
+        </scene>
+    </scenes>
+</document>
